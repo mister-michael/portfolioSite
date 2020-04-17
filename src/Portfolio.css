@@ -1,0 +1,130 @@
+.siteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.pPF{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    
+}
+
+.pPFBox {
+    margin: 0px 1%;
+    padding: 70px;
+    max-width:25%;
+
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.detailsCard {
+    
+    padding: 5% 10%;
+    /* margin: 5% 10%; */
+    border: 1px rgba(0, 0, 0, 0.18) solid;
+    border-radius: 1%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.385);
+    background-color: white;
+    
+}
+
+.marginTop {
+    margin-top: 15px;
+}
+.marginBottom {
+    margin-bottom: 30px;
+}
+.indent {
+    margin-left: 20px;
+}
+.indentLarge {
+    margin-left: 30px;
+}
+.biggerFont {
+    font-size: x-large;
+    margin-left: 2px;
+}
+.biggerFont2 {
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2px;
+}
+.detailBody {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.titleAndParagraph {
+    padding: 1% 0;
+    font-size: x-large;
+}
+.blackBackground {
+    /* background-color: red; */
+}
+
+.subText {
+    font-size: large;
+    font-style: italic;
+    font-weight: 900;
+    margin: 0px 0px 20px 2px;
+}
+
+.headlineText {
+    font-size: 5em;
+    font-weight: lighter;
+}
+
+.titleText {
+    font-size: xx-large;
+}
+
+.navStyle {
+    /* position: fixed !important;
+    position: static !important; */
+    width: 100% !important;
+}
+
+.photoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 5%;
+}
+
+.headerPhoto {
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    /* max-width: 1200px; */
+}
+
+.sizeSm {
+/* max-width: 30%; */
+}
+
+.row {
+    /* display: flex !important; */
+    /* flex-direction: row !important; */
+}
+
+.headerContainer {
+    background-color: rgba(21, 21, 22, 0.925);
+    padding: 0px 0px 20px 0px;
+    /* display: flex; */
+    /* flex-direction: row; */
+}
