@@ -8,7 +8,7 @@ import Home from "./home/Home"
 
 const PortfolioTabs = () => {
 
-    const [activeTab, setActiveTab] = useState('2');
+    const [activeTab, setActiveTab] = useState('1');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -56,6 +56,7 @@ const PortfolioTabs = () => {
                             <TheHeader />
                             <div className="siteBody">
                                 <ThePast
+                                toggle={toggle}
                                 />
                             </div>
                         </Col>

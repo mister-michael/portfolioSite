@@ -11,12 +11,17 @@ const ThePast = () => {
                 <div className="subText">
                     <a className="biggerFont"><a className="indent"></a>We </a>are currently in the...</div>
                 <div className="marginBottom60">
-                    <h1 className="headlineText"><a className="indentLarge"></a>Past</h1>
+                    <h1 className="headlineText borderBottom marginBottom3"><a className="indentLarge"></a>"Past"</h1>
                 </div>
             </div>
             <CardText className="marginTop">
-                <div className="subText bold">Nashville Software School</div>
-                <div className="subTitle marginBottom20">Jan 2019 to Present</div>
+                <section className="flex-row-wrap">
+                    <img className="logo" src={require("../img/NSS-icon.jpeg")} />
+                    <div>
+                        <div className="subText bold">Nashville Software School</div>
+                        <div className="subTitle marginBottom20">Jan 2020 to Present</div>
+                    </div>
+                </section>
                 {/* <a className="indent"></a> */}
                 <ul className="resumeDetails">
                     <li>Full-time Full-Stack Team-Intensive Bootcamp. </li>
@@ -29,6 +34,40 @@ const ThePast = () => {
                     <li>Project Management with Github Projects and Trelo.</li>
                 </ul>
             </CardText>
+
+            <h1 className="headlineText borderBottom marginBottom3"><a className="indentLarge"></a>Apps</h1>
+
+
+            <div className="apps-section">
+                <section id="" className="project-section marginTop ">
+                    <div className="skillsSection boxShadow">
+                        <div className="project-card card-font ">h!pst@r</div>
+                        <div >
+                            <img className="hipstar" src={require("../img/hipstar-page.png")} />
+                            <div>
+                                {/* <p className="bodyText paddingBody">h!pst@r is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review. Users are matched with users whose Hate list most resembles their own, and they are recommended movies from that user's Love list.  The  app employs full CRUD functionality, using TMD to populate a JSON-server from where data can be adjusted. Built in React.js, the site utilizes Reactstrap as a basis for styling, upone which basic CSS has been applied.</p> */}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+                <section id="" className="project-section marginTop ">
+                    <div className="skillsSection boxShadow">
+                        <div className="project-card card-font ">back_end</div>
+                        <div >
+                            <img className="hipstar" src={require("../img/python-icon.png")} />
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+
             <Skills />
 
 
