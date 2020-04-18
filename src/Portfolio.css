@@ -128,6 +128,10 @@
     font-weight: 300;
 }
 
+.resumeDetails {
+    font-size: 1.1em;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -213,4 +217,40 @@
     padding: 0px 0px 0px 0px;
     /* display: flex; */
     /* flex-direction: row; */
+}
+
+#apps-and-acts-container {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap-reverse; */
+    padding-left: 10%;
+    justify-content: space-between
+    /* align-items: center; */
+
+}
+
+#acts {
+    max-width: 50%;
+    min-width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+
+#apps {
+max-width: 50%;
+min-width: 49%;
+display: flex;
+flex-direction: column;
+}
+
+.buttonSize {
+    background-color: white;
+    color: black;
+    font-size: .9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    min-width: 100px;
+    max-width: 50%;
+    box-shadow: -10px 15px 10px 0px rgba(128, 128, 128, 0.31);
+    padding: 10% 0%;
 }

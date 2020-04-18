@@ -8,7 +8,7 @@ import Home from "./home/Home"
 
 const PortfolioTabs = () => {
 
-    const [activeTab, setActiveTab] = useState('1');
+    const [activeTab, setActiveTab] = useState('2');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -25,7 +25,7 @@ const PortfolioTabs = () => {
                         className={classnames({ active: activeTab === '2' })}
                         onClick={() => { toggle('2'); }}
                     >
-                        Past
+                        Present
           </NavLink>
                 </NavItem>
                 <NavItem>
@@ -33,7 +33,7 @@ const PortfolioTabs = () => {
                         className={classnames({ active: activeTab === '1' })}
                         onClick={() => { toggle('1'); }}
                     >
-                        <a className="">Present</a>
+                        <a className="">Past</a>
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -55,7 +55,7 @@ const PortfolioTabs = () => {
                         <Col sm="12">
                             <TheHeader />
                             <div className="siteBody">
-                                <ThePresent
+                                <ThePast
                                 />
                             </div>
                         </Col>
@@ -63,7 +63,7 @@ const PortfolioTabs = () => {
                 </TabPane>
                 <TabPane tabId="2">
                     <TheHeader />
-                    <ThePast toggle={toggle}/>
+                    <ThePresent toggle={toggle}/>
                 </TabPane>
                 <TabPane tabId="3">
                     <TheHeader />
