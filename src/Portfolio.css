@@ -37,7 +37,11 @@
 }
 
 .hipstar {
-    max-width: 100%;
+    /* object-fit: cover; */
+    max-width: 25%;
+    min-width: 90px;
+    max-height: 25%;
+    float: left;
 }
 
 .card-font {
@@ -56,10 +60,28 @@
     ;
 }
 
+
+.testChild {
+    float: left;
+    background: red;
+    margin: 0px 5% 0px 5%;
+}
+
+.testCopy {
+    padding: 0px 0px 0px 10px;
+}
+
+.testContainer {
+    
+}
+
+
+
+
 .apps-section {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
@@ -210,6 +232,12 @@
     font-style: oblique;
 }
 
+.appSection {
+    display: flex;
+    flex-direction: row;
+
+}
+
 .marginBottom20 {
     margin-bottom: 20px;
 }
@@ -220,6 +248,11 @@
 .headlineText {
     font-size: 5em;
     font-weight: lighter;
+}
+.headlineText2 {
+    text-align: left;
+    font-size: 4em;
+    font-weight: 100;
 }
 
 .titleText {
