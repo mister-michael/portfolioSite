@@ -1,39 +1,35 @@
 import React from "react"
 import { Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
+import Skills from "./Skills"
 
-const ThePresent = () => {
+const ThePresent = (props) => {
 
     return (
-        <div className="detailsCard">
-            <h1 className="headlineText marginBottom">Michael Clark</h1>
-            <CardText className="detailBody">
-                <div className="titleAndParagraph subText marginBottom">
-                    A
-                    <a className="biggerFont">
-                        Portfolio </a>
-                    in three Acts.
-                </div>
-            </CardText>
-            <section className="pPF">
-                <div className="pPFBox">Present.</div>
-                <div className="pPFBox">Past.</div>
-                <div className="pPFBox">Future.</div>
-            </section>
+        <div className="detailsCard pageBody">
             <div className="">
                 <a className="indent"></a>
                 <div className="subText">
-
-                    <a className="biggerFont"><a className="indent"></a>We </a>are currently in the</div>
-                <div className="">
-
-
+                    <a className="biggerFont"><a className="indent"></a>We </a>are currently in the...</div>
+                <div className="marginBottom60">
                     <h1 className="headlineText"><a className="indentLarge"></a>Present</h1>
                 </div>
             </div>
-            <CardText className="marginTop"><a className="indent"></a>I have spent my life in the pursuit of creation. Musical, photographic and experiential. In code, I've found the ultimate creative tool and in the web, the ultimate canvas.  Levels of abstraction and metaphor akin to art and story, and levels of logic of which past mediums were woefully devoid. Code has provided me with a task, a community and a frame of mind which continue to enrich and inspire me.</CardText>
-            <CardText>
-                {/* <small className="text-muted">Last updated 3 mins ago</small> */}
+            <CardText className="marginTop">
+                <div className="subText bold">Nashville Software School</div>
+                <div className="subTitle marginBottom20">Jan 2019 to Present</div>
+                {/* <a className="indent"></a> */}
+                <div>Full-time Full-Stack Team-Intensive Bootcamp. </div>
+                <div>Front End Development using HTML, CSS, Javascript and React.</div>
+                <div>Back  End Development with Python and Django.</div>
+                <div>Utilized third party APIs (JSON Server, The Movie Database) for web apps.</div>
+                <div>Responsible for CRUD functionality in individual and group projects.</div>
+                <div>Leveraged Slack and Zoom for remote study and group projects.</div>
+                <div>Secure code version control using Git / Github.</div>
+                <div>Project Management with Github Projects and Trelo.</div>
             </CardText>
+            <Skills />
+
+
         </div>
     )
 }

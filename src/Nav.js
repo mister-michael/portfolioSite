@@ -24,7 +24,8 @@ const TheNav = (props) => {
         <div>
             <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">
-                    Mike Clark
+                    Michael Clark
+                    {/* <a className="webDeveloper">web developer</a> */}
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
