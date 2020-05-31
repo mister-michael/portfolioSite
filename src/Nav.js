@@ -36,6 +36,9 @@ const TheNav = (props) => {
                         <NavItem>
                             <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink href="https://www.linkedin.com/in/michaelclarknashville/">LinkedIn</NavLink>
+                        </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
                                 Resume

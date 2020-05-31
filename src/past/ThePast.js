@@ -46,7 +46,7 @@ const ThePast = (props) => {
 
             <section className="sectionHeader">
                 <div className="headlineText2 marginTop borderBottom"><a className="indentLarge"></a>Apps</div>
-                <div className="subText bold marginBottom borderBottom">{indentLarge()} front end</div>
+                <div className="subText bold marginBottom borderBottom">{indentLarge()} Individual Projects</div>
             </section>
 
             <div>
@@ -60,16 +60,61 @@ const ThePast = (props) => {
                 </section>
 
                 <Modal isOpen={modal} toggle={toggle} className="">
-                    <ModalHeader toggle={toggle} close={closeBtn}>h!pst@r</ModalHeader>
+                    <ModalHeader className="subText" toggle={toggle} close={closeBtn}></ModalHeader>
                     <ModalBody>
                         <section className="testContainer">
-                            <img className="hipstar testChild" src={require("../img/hipstar-page.png")} />
+                            {/* <img className="hipstar testChild" src={require("../img/hipstar-page.png")} /> */}
+                            <div className="modalImg">
+                                <div className="headlineText boldFont"> h!pst@r</div>
+                                <div className="subText marginBottom3 borderBottom"> {indentLarge()} React.js</div>
+                            </div>
 
-                            <p className="testCopy">
-                                h!pst@r is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review. Users are matched with users whose Hate list most resembles their own, and they are recommended movies from that user's Love list.  The  app employs full CRUD functionality, using TMD to populate a JSON-server from where data can be adjusted. Built in React.js, the site utilizes Reactstrap as a basis for styling, upone which basic CSS has been applied.
+                            <p className="testCopy marginTop">
+                                h!pst@r is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review.
+                                <p>{indentLarge()}Users are matched with users whose Hate list most resembles their own, and they are recommended movies from that user's Love list.</p>
+                                <p>{indentLarge()}The  app employs full CRUD functionality, using TMD to populate a JSON-server from where data can be adjusted. Built in React.js, the site utilizes Reactstrap as a basis for styling, upone which basic CSS has been applied.
+                                </p>
+                            </p>
+                        </section>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
+                        <Button color="secondary" onClick={toggle}>Cancel</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
 
-                                h!pst@r is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review. Users are matched with users whose Hate list most resembles their own, and they are recommended movies from that user's Love list.  The  app employs full CRUD functionality, using TMD to populate a JSON-server from where data can be adjusted. Built in React.js, the site utilizes Reactstrap as a basis for styling, upone which basic CSS has been applied.
-                </p>
+            <section className="sectionHeader">
+            <div className="headlineText2 marginTop borderBottom"><a className="indentLarge"></a></div>
+                <div className="subText bold marginBottom borderBottom">{indentLarge()} Group Projects</div>
+            </section>
+
+            <div>
+                <section onClick={toggle} id="" className="project-section marginTop ">
+                    <div className="skillsSection boxShadow ">
+                        <div className="project-card card-font ">h!pst@r</div>
+                        <div >
+                            <img className="hipstar" src={require("../img/python-icon.png")} />
+                        </div>
+                    </div>
+                </section>
+
+                <Modal isOpen={modal} toggle={toggle} className="">
+                    <ModalHeader className="subText" toggle={toggle} close={closeBtn}></ModalHeader>
+                    <ModalBody>
+                        <section className="testContainer">
+                            {/* <img className="hipstar testChild" src={require("../img/hipstar-page.png")} /> */}
+                            <div className="modalImg">
+                                <div className="headlineText boldFont"> h!pst@r</div>
+                                <div className="subText marginBottom3 borderBottom"> {indentLarge()} React.js</div>
+                            </div>
+
+                            <p className="testCopy marginTop">
+                                h!pst@r is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review.
+                                <p>{indentLarge()}Users are matched with users whose Hate list most resembles their own, and they are recommended movies from that user's Love list.</p>
+                                <p>{indentLarge()}The  app employs full CRUD functionality, using TMD to populate a JSON-server from where data can be adjusted. Built in React.js, the site utilizes Reactstrap as a basis for styling, upone which basic CSS has been applied.
+                                </p>
+                            </p>
                         </section>
                     </ModalBody>
                     <ModalFooter>

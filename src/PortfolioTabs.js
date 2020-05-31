@@ -5,10 +5,11 @@ import TheHeader from "./header/TheHeader"
 import ThePresent from "./present/ThePresent"
 import ThePast from "./past/ThePast"
 import Home from "./home/Home"
+import './Portfolio.css'
 
 const PortfolioTabs = () => {
 
-    const [activeTab, setActiveTab] = useState('1');
+    const [activeTab, setActiveTab] = useState('4');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -45,7 +46,7 @@ const PortfolioTabs = () => {
           </NavLink>
                 </NavItem>
             </Nav>
-            <TabContent activeTab={activeTab}>
+            <TabContent className="page-container" activeTab={activeTab}>
                 <TabPane tabId="4">
                     <TheHeader />
                     <Home toggle={toggle} />

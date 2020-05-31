@@ -16,9 +16,9 @@ const Home = (props) => {
             </CardText>
             <section className="pPF">
                 <div
-                    onClick={() => { props.toggle('1'); }} className="pPFBox">Present.</div>
+                    onClick={() => { props.toggle('2'); }} className="pPFBox">Present.</div>
                 <div
-                    onClick={() => { props.toggle('2'); }} className="pPFBox">Past.</div>
+                    onClick={() => { props.toggle('1'); }} className="pPFBox">Past.</div>
                 <div
                     onClick={() => { props.toggle('3'); }} className="pPFBox">Future.</div>
             </section>

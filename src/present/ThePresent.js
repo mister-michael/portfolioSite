@@ -19,7 +19,7 @@ const ThePresent = (props) => {
             </div>
             <div className="marginTop ">
                 <a className="indent"></a>
-                <div className="bodyText marginBottom2 borderBottom"> I have spent my life in the pursuit of creation. Musical, photographic and experiential. In code, I've found the ultimate creative tool and in the web, the ultimate canvas.  Levels of abstraction and metaphor akin to art and story, and levels of logic of which past mediums were woefully devoid. Code has provided me with a task, a community and a frame of mind which continue to enrich and inspire me.</div>
+                <div className="bodyText marginBottom2 borderBottom"> I have spent my life in the pursuit of creation. Musical, photographic and experiential. In code, I've found the ultimate creative tool and in apps, the ultimate canvas.  Levels of abstraction and metaphor akin to art and story, and levels of logic of which past mediums were woefully devoid. Code has provided me with a task, a community and a frame of mind which continue to enrich and inspire me.</div>
             </div>
 
 
@@ -60,7 +60,7 @@ const ThePresent = (props) => {
 
                 <div id="apps">
                     <div className="subText marginTop">
-                        This is a<a className="biggerFont"><a className="indent"></a>Portfolio </a>in
+                        This is also a<a className="biggerFont"><a className="indent"></a>Portfolio </a>in
                         <div>three...</div>
                     </div>
                     <h1 className="headlineText"><a className="indentLarge"></a>Apps</h1>
