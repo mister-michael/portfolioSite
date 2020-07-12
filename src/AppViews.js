@@ -8,8 +8,9 @@ const AppViews = (props) => {
 
     return (
         <>
-                <TheNav className="navStyle"/>
-            <div className="siteContainer">
+
+            <div className="siteContainer stieBody">
+                <TheNav className="navStyle" />
                 <PortfolioTabs />
                 <TheFooter />
             </div>

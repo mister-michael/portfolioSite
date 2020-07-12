@@ -7,7 +7,8 @@
 .siteBody {
     display: flex;
     flex-direction: column;
-    /* max-width: 1400px; */
+    padding-left: 50px;
+    max-width: 1400px;
     justify-content: center;
     align-items: center;
 }
@@ -15,6 +16,7 @@
 .pageBody {
     max-width: 1400px;
     margin-bottom: 70px;
+    
     display: flex;
     flex-direction: column;
     
@@ -41,14 +43,21 @@
 
 .hipstar {
     /* object-fit: cover; */
-    max-width: 25%;
+    max-width: 15%;
     min-width: 90px;
+    max-height: 25%;
+    float: left;
+}
+.project-card-image {
+    /* object-fit: cover; */
+    max-width: 5%;
+    /* min-width: 90px; */
     max-height: 25%;
     float: left;
 }
 
 .card-font {
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .project-card {
@@ -58,7 +67,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    padding: 10px 0px 20px 30px;
+    /* padding: 10px 0px 20px 30px; */
+    padding: 25px 35px;
     /* max-width: 100%; */
     ;
 }
@@ -93,11 +103,17 @@
     flex-direction: column;
     flex-wrap: wrap;
     /* border:/ 1px solid black; */
-    max-width: 45%;
+    max-width: 95%;
+    min-width: 35%;
     padding: 0px 3%;
-    
 }
 
+.cardPadding {
+    margin: 5px 35px 25px;
+}
+.card-image-padding {
+    margin: 0px 10px 90px 35px;
+}
 
 
 .skillsDiv {
@@ -185,7 +201,7 @@
     margin-left: 20px;
 }
 .indentLarge {
-    margin-left: 30px;
+    margin-left: 30px !important;
 }
 .detailBody {
     display: flex;
@@ -327,6 +343,24 @@
     border: red solid 10px
 }
 
+.project-card-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-card-content {
+    margin: 5px;
+}
+
+.click-for-details {
+    margin: 10px;
+    color: blue;
+}
+
+.click-for-details:hover {
+    color: aqua;
+}
+
 .sizeSm {
 /* max-width: 30%; */
 }
@@ -356,10 +390,10 @@
 }
 
 #apps {
-max-width: 50%;
-min-width: 49%;
-display: flex;
-flex-direction: column;
+    max-width: 50%;
+    min-width: 49%;
+    display: flex;
+    flex-direction: column;
 }
 
 .buttonSize {
@@ -380,4 +414,8 @@ flex-direction: column;
 
 .paddingBody {
     padding: 15px 5px 20px 25px
+}
+
+.linkcolor {
+    color: blue
 }

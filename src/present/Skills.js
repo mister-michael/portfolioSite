@@ -41,6 +41,14 @@ const Skills = () => {
                             src={require("../img/github-icon.png")}
                             className="iconBox"
                         />
+                        <img
+                            src={require("../img/postman-icon.png")}
+                            className="iconBox"
+                        />
+                        <img
+                            src={require("../img/tableplus-icon.jpeg")}
+                            className="iconBox"
+                        />
                     </div>
                 </div>
 

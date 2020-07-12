@@ -9,7 +9,7 @@ import './Portfolio.css'
 
 const PortfolioTabs = () => {
 
-    const [activeTab, setActiveTab] = useState('4');
+    const [activeTab, setActiveTab] = useState('2');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -48,13 +48,13 @@ const PortfolioTabs = () => {
             </Nav>
             <TabContent className="page-container" activeTab={activeTab}>
                 <TabPane tabId="4">
-                    <TheHeader />
+                    <TheHeader headerURL={"./threeMikes-big.jpg"} />
                     <Home toggle={toggle} />
                 </TabPane>
                 <TabPane tabId="1">
                     <Row>
                         <Col sm="12">
-                            <TheHeader />
+                            <TheHeader headerURL={"./threeMikes-left-focus.jpg"} />
                             <div className="siteBody">
                                 <ThePast
                                 toggle={toggle}
@@ -64,11 +64,11 @@ const PortfolioTabs = () => {
                     </Row>
                 </TabPane>
                 <TabPane tabId="2">
-                    <TheHeader />
+                    <TheHeader headerURL={"./threeMikes-big.jpg"} />
                     <ThePresent toggle={toggle}/>
                 </TabPane>
                 <TabPane tabId="3">
-                    <TheHeader />
+                    <TheHeader headerURL={"./threeMikes-right-focus.jpg"} />
                     <div>Future</div>
                 </TabPane>
             </TabContent>
