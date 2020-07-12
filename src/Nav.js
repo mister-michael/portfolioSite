@@ -24,7 +24,8 @@ const TheNav = (props) => {
         <div>
             <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">
-                    Mike Clark
+                    Michael Clark
+                    {/* <a className="webDeveloper">web developer</a> */}
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
@@ -34,6 +35,9 @@ const TheNav = (props) => {
                         </NavItem>
                         <NavItem>
                             <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="https://www.linkedin.com/in/michaelclarknashville/">LinkedIn</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
