@@ -29,7 +29,7 @@ const TheFuture = () => {
                         <p>
                             I have installed Jitsi video conferencing software so we can chat. Send me a text or email,
                             and let's set up a time to chat. You'll find a link to my video conferencing site at the top of 
-                            the page.
+                            the page by clicking on <a href="chat.michaelclarknashville.com">chat</a>.
                         </p>
                     </div>
                 </div>
