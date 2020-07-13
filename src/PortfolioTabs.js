@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import TheHeader from "./header/TheHeader"
 import ThePresent from "./present/ThePresent"
@@ -34,7 +34,7 @@ const PortfolioTabs = () => {
                         className={classnames({ active: activeTab === '1' })}
                         onClick={() => { toggle('1'); }}
                     >
-                        <a className="">Past</a>
+                        Past
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -46,6 +46,7 @@ const PortfolioTabs = () => {
           </NavLink>
                 </NavItem>
             </Nav>
+
             <TabContent className="page-container" activeTab={activeTab}>
                 <TabPane tabId="4">
                     <TheHeader headerURL={"./threeMikes-big.jpg"} />
@@ -57,15 +58,16 @@ const PortfolioTabs = () => {
                             <TheHeader headerURL={"./threeMikes-left-focus.jpg"} />
                             <div className="siteBody">
                                 <ThePast
-                                toggle={toggle}
+                                    toggle={toggle}
                                 />
                             </div>
                         </Col>
                     </Row>
                 </TabPane>
+                
                 <TabPane tabId="2">
                     <TheHeader headerURL={"./threeMikes-big.jpg"} />
-                    <ThePresent toggle={toggle}/>
+                    <ThePresent toggle={toggle} />
                 </TabPane>
                 <TabPane tabId="3">
                     <TheHeader headerURL={"./threeMikes-right-focus.jpg"} />

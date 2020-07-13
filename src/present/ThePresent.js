@@ -1,11 +1,10 @@
 import React, { useState } from "react"
-import { Card, CardBody, Button, CardText, CardText as div, CardImg } from 'reactstrap';
 import Skills from "./Skills"
 import "../Portfolio.css"
 
 const ThePresent = (props) => {
 
-    const indentLarge = () => <a className="indentLarge"></a>
+    const indentLarge = () => ""
 
     const [modal, setModal] = useState(false);
 
@@ -14,16 +13,14 @@ const ThePresent = (props) => {
     return (
         <div className="detailsCard pageBody">
             <div className="">
-                <a className="indent"></a>
                 <div className="subText">
-                    <a className="biggerFont"><a className="indent"></a>We </a>are currently in the...
+                    <div className="biggerFont">We </div>are currently in the...
                     </div>
                 <div className="">
-                    <h1 className="headlineText"><a className="indentLarge"></a>Present</h1>
+                    <h1 className="headlineText">Present</h1>
                 </div>
             </div>
             <div className="marginTop ">
-                <a className="indent"></a>
                 <div className="bodyText marginBottom2 borderBottom"> I have spent my life in the pursuit of creation. Musical, photographic and experiential. In code, I've found the ultimate creative tool and in apps, the ultimate canvas.  Levels of abstraction and metaphor akin to art and story, and levels of logic of which past mediums were woefully devoid. Code has provided me with a task, a community and a frame of mind which continue to enrich and inspire me.</div>
             </div>
 
@@ -40,9 +37,9 @@ const ThePresent = (props) => {
                         <h1 className="headlineText borderBottom marginBottom3"><a className="indentLarge"></a>"Past"</h1>
                     </div>
                 </div> */}
-                    <CardText className="marginTop">
+                    <div className="marginTop">
                         <section className="flex-row-wrap">
-                            <img className="logo" src={require("../img/NSS-icon.jpeg")} />
+                            <img className="logo" src={require("../img/NSS-icon.jpeg")} alt=""/>
                             <div>
                                 <div className="subText bold">Nashville Software School</div>
                                 <div className="subTitle marginBottom20">Jan 2020 to Jun 2020</div>
@@ -59,19 +56,17 @@ const ThePresent = (props) => {
                             <li>Secure code version control using Git / Github.</li>
                             <li>Project Management with Github Projects and Trelo.</li>
                         </ul>
-                    </CardText>
+                    </div>
 
                     <div className="">
-                        <a className="indent"></a>
                         <div className="subText">
-                            <a className="biggerFont"><a className="indent"></a>Unexpected </a>lessons...
+                            <div className="biggerFont">Unexpected </div>lessons...
                     </div>
                         {/* <div className="">
                             <h1 className="headlineText"><a className="indentLarge"></a>Present</h1>
                         </div> */}
                     </div>
                     <div className="marginTop ">
-                        <a className="indent"></a>
                         <div className="bodyText marginBottom2">
                             <ul>
                                 <li>Team Communication</li>
@@ -85,7 +80,7 @@ const ThePresent = (props) => {
 
 
                     <section className="sectionHeader">
-                        <div className="headlineText2 marginTop borderBottom"><a className="indentLarge"></a>Apps</div>
+                        <div className="headlineText2 marginTop borderBottom">Apps</div>
                         <div className="subText bold marginBottom borderBottom">{indentLarge()} Individual Projects</div>
                     </section>
 
@@ -105,13 +100,13 @@ const ThePresent = (props) => {
                                     <div><a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Overview on Github</a></div>
                                 </div>
                                 <div className="card-image-padding">
-                                    <img className="project-card-image" src={require("../img/django-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/react-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/HTML5-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/css3-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/github-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/python-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/javascript-icon.png")} />
+                                    <img className="project-card-image" src={require("../img/django-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/react-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/HTML5-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/css3-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/github-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/python-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/javascript-icon.png")} alt=""/>
                                 </div>
                             </div>
                         </section>
@@ -129,13 +124,13 @@ const ThePresent = (props) => {
                                     <div><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Overview on Github</a></div>
                                 </div>
                                 <div className="card-image-padding">
-                                    <img className="project-card-image" src={require("../img/django-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/react-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/HTML5-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/css3-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/github-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/python-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/javascript-icon.png")} />
+                                    <img className="project-card-image" src={require("../img/django-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/react-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/HTML5-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/css3-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/github-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/python-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/javascript-icon.png")} alt=""/>
                                 </div>
                             </div>
                         </section>
@@ -143,7 +138,6 @@ const ThePresent = (props) => {
 
 
                     <section className="sectionHeader">
-                        <div className="headlineText2 marginTop borderBottom"><a className="indentLarge"></a></div>
                         <div className="subText bold marginBottom borderBottom">{indentLarge()} Group Projects</div>
                     </section>
 
@@ -168,15 +162,15 @@ const ThePresent = (props) => {
                                     </div>
                                 </div>
                                 <div className="card-image-padding">
-                                    <img className="project-card-image" src={require("../img/django-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/python-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/react-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/javascript-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/HTML5-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/css3-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/github-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/postman-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/tableplus-icon.jpeg")} />
+                                    <img className="project-card-image" src={require("../img/django-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/python-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/react-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/javascript-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/HTML5-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/css3-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/github-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/postman-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/tableplus-icon.jpeg")} alt=""/>
                                 </div>
                             </div>
                         </section>
@@ -200,11 +194,11 @@ const ThePresent = (props) => {
                                     </div>
                                 </div>
                                 <div className="card-image-padding">
-                                    <img className="project-card-image" src={require("../img/django-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/python-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/github-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/postman-icon.png")} />
-                                    <img className="project-card-image" src={require("../img/tableplus-icon.jpeg")} />
+                                    <img className="project-card-image" src={require("../img/django-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/python-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/github-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/postman-icon.png")} alt=""/>
+                                    <img className="project-card-image" src={require("../img/tableplus-icon.jpeg")} alt=""/>
                                 </div>
                             </div>
                         </section>
