@@ -8,18 +8,26 @@ width: 100%;
 
 .imageCard {
     width: 25%;
-    height: 100px;
+    max-height: 96px;
     overflow: hidden;
 }
 
+.imageCard:hover {
+    cursor: pointer;
+   
+}
+
+
 .galleryImage {
     max-width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* max-height: 100px; */
 }
 
 .modalImage {
     width: 90%;
     max-width: 720px;
+    
     display: flex;
     justify-content: center;
     margin-bottom: 20px;

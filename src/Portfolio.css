@@ -186,6 +186,9 @@
 .margin-top {
     margin: 80px 0px 0px 0px;
 }
+.margin-top2 {
+    margin: 130px 0px 0px 0px;
+}
 .marginBottom {
     margin-bottom: 30px;
 }
@@ -264,7 +267,7 @@
     margin-bottom: 20px;
 }
 .marginBottom60 {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .headlineText {
@@ -422,4 +425,31 @@
 
 .linkcolor {
     color: blue
+}
+
+.timeTravelButton {
+    display: flex;
+    justify-content: center;
+    border: solid gray .1em;
+    background-color: yellow;
+    /* border-radius: 50%; */
+    padding: 10px;
+    width: 20%;
+    box-shadow: 10px 5px 8px gray;
+}
+
+.timeTravelButton:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 79);
+}
+
+.timeTravelButtonContainer {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.twoButton {
+    display: flex;
+    justify-content: center;
 }

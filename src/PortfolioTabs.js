@@ -4,12 +4,13 @@ import classnames from 'classnames';
 import TheHeader from "./header/TheHeader"
 import ThePresent from "./present/ThePresent"
 import ThePast from "./past/ThePast"
+import TheFuture from "./future/TheFuture"
 import Home from "./home/Home"
 import './Portfolio.css'
 
-const PortfolioTabs = () => {
+const PortfolioTabs = (props) => {
 
-    const [activeTab, setActiveTab] = useState('1');
+    const [activeTab, setActiveTab] = useState('3');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -58,20 +59,30 @@ const PortfolioTabs = () => {
                             <TheHeader headerURL={"./threeMikes-left-focus.jpg"} />
                             <div className="siteBody">
                                 <ThePast
+                                    setActiveTab={setActiveTab}
+                                    {...props}
                                     toggle={toggle}
                                 />
                             </div>
                         </Col>
                     </Row>
                 </TabPane>
-                
+
                 <TabPane tabId="2">
                     <TheHeader headerURL={"./threeMikes-big.jpg"} />
-                    <ThePresent toggle={toggle} />
+                    <ThePresent
+                        setActiveTab={setActiveTab}
+                        {...props}
+                        toggle={toggle} />
                 </TabPane>
                 <TabPane tabId="3">
-                    <TheHeader headerURL={"./threeMikes-right-focus.jpg"} />
-                    <div>Future</div>
+                    <TheHeader
+
+                        headerURL={"./threeMikes-right-focus.jpg"} />
+                    <TheFuture
+                        setActiveTab={setActiveTab}
+                        {...props}
+                        toggle={toggle} />
                 </TabPane>
             </TabContent>
         </div>

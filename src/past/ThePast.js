@@ -4,7 +4,7 @@ import "./thePast.css"
 const ThePast = (props) => {
 
     const [modal, setModal] = useState(false);
-    const [image, setImage] = useState(null)
+    const [image, setImage] = useState("./pastMedia/egoDeath.jpg")
 
     const toggle = (e) => {
         setImage(e.target.id)
@@ -14,6 +14,15 @@ const ThePast = (props) => {
         if (isHidden.value === "hidden") {
             document.getElementById("modalImage").classList.toggle("hidden")
         }
+    }
+
+    const goToPast = () => {
+        props.setActiveTab("1")
+        window.scrollTo(0, 0)
+    }
+    const goToFuture = () => {
+        props.setActiveTab("3")
+        window.scrollTo(0, 0)
     }
 
     // useEffect(() => {
@@ -39,15 +48,9 @@ const ThePast = (props) => {
                         : null}
                 </div>
 
+                <div style={{ color: "#808080" }}>click on a box to see the full image</div>
+
                 <div className="gallery">
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/BigScreen.jpg" className="galleryImage" src={require("./pastMedia/BigScreen.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/Cole.jpg" className="galleryImage" src={require("./pastMedia/Cole.jpg")} alt="" />
-                    </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/Comic01.jpg" className="galleryImage" src={require("./pastMedia/Comic01.jpg")} alt="" />
@@ -58,35 +61,20 @@ const ThePast = (props) => {
                     </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/egoDeath.jpg" className="galleryImage" src={require("./pastMedia/egoDeath.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/girlFace.jpg" className="galleryImage" src={require("./pastMedia/girlFace.jpg")} alt="" />
                     </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/gogolStage.jpg" className="galleryImage" src={require("./pastMedia/gogolStage.jpg")} alt="" />
+                        <img id="./pastMedia/supergirl.jpg" className="galleryImage" src={require("./pastMedia/supergirl.jpg")} alt="" />
+                    </div>
+
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/BigScreen.jpg" className="galleryImage" src={require("./pastMedia/BigScreen.jpg")} alt="" />
                     </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/leaves.jpg" className="galleryImage" src={require("./pastMedia/leaves.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/mirror.jpg" className="galleryImage" src={require("./pastMedia/mirror.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/moth.jpg" className="galleryImage" src={require("./pastMedia/moth.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/nemo.jpg" className="galleryImage" src={require("./pastMedia/nemo.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/pinwheelFace.jpg" className="galleryImage" src={require("./pastMedia/pinwheelFace.jpg")} alt="" />
+                        <img id="./pastMedia/Cole.jpg" className="galleryImage" src={require("./pastMedia/Cole.jpg")} alt="" />
                     </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
@@ -94,20 +82,54 @@ const ThePast = (props) => {
                     </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/stephen.jpg" className="galleryImage" src={require("./pastMedia/stephen.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/supergirl.jpg" className="galleryImage" src={require("./pastMedia/supergirl.jpg")} alt="" />
-                    </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/tim.jpg" className="galleryImage" src={require("./pastMedia/tim.jpg")} alt="" />
                     </div>
+
 
                     <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/tree.jpg" className="galleryImage" src={require("./pastMedia/tree.jpg")} alt="" />
                     </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/egoDeath.jpg" className="galleryImage" src={require("./pastMedia/egoDeath.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/leaves.jpg" className="galleryImage" src={require("./pastMedia/leaves.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/moth.jpg" className="galleryImage" src={require("./pastMedia/moth.jpg")} alt="" />
+                    </div>
+
+
+
+
+
+                    {/* <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/gogolStage.jpg" className="galleryImage" src={require("./pastMedia/gogolStage.jpg")} alt="" />
+                    </div> */}
+
+                    {/* <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/mirror.jpg" className="galleryImage" src={require("./pastMedia/mirror.jpg")} alt="" />
+                    </div> */}
+
+                    {/* <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/nemo.jpg" className="galleryImage" src={require("./pastMedia/nemo.jpg")} alt="" />
+                    </div> */}
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/pinwheelFace.jpg" className="galleryImage" src={require("./pastMedia/pinwheelFace.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/stephen.jpg" className="galleryImage" src={require("./pastMedia/stephen.jpg")} alt="" />
+                    </div>
+
+
+
+
+
 
                     <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/yarnEyes.jpg" className="galleryImage" src={require("./pastMedia/yarnEyes.jpg")} alt="" />
@@ -117,11 +139,17 @@ const ThePast = (props) => {
                         <img id="./pastMedia/yarnHair.jpg" className="galleryImage" src={require("./pastMedia/yarnHair.jpg")} alt="" />
                     </div>
 
-                    <div onClick={e => toggle(e)} className="imageCard">
+                    {/* <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/Cloud.jpg" className="galleryImage" src={require("./pastMedia/Cloud.jpg")} alt="" />
-                    </div>
+                    </div> */}
 
                 </div>
+               
+                    <div className="timeTravelButtonContainer marginTop">
+                        <div
+                            onClick={goToFuture}
+                            className="timeTravelButton">Travel to the Future</div>
+                    </div>
 
             </div>
         </>

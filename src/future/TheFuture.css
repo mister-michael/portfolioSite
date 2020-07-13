@@ -1,0 +1,15 @@
+.resumeImage {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 8px 29px rgb(194, 189, 189);
+    display: flex;
+    justify-content: center;
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
