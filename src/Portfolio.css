@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
 }
 
 .siteBody {
@@ -11,6 +12,7 @@
     max-width: 1400px;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .pageBody {
@@ -181,8 +183,12 @@
     margin-top: 15px;
 }
 
+
 .margin-top {
     margin: 80px 0px 0px 0px;
+}
+.margin-top2 {
+    margin: 130px 0px 0px 0px;
 }
 .marginBottom {
     margin-bottom: 30px;
@@ -192,6 +198,9 @@
 }
 .marginBottom3 {
     padding-bottom: 50px;
+}
+.marginBottom4 {
+    padding-bottom: 20px;
 }
 
 .borderBottom {
@@ -224,6 +233,7 @@
     font-weight: 900;
     font-style: italic;
     margin-left: 2px;
+    display: inline;
 }
 .biggerFont2 {
     font-size: 2em;
@@ -256,17 +266,21 @@
     flex-direction: row;
 
 }
+.marginTop2 {
+    margin-top: 60px;
+}
 
 .marginBottom20 {
     margin-bottom: 20px;
 }
 .marginBottom60 {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .headlineText {
     font-size: 5em;
     font-weight: lighter;
+    margin-left: 25px;
 }
 .headlineText2 {
     text-align: left;
@@ -332,6 +346,7 @@
 .page-container {
     display: flex;
     justify-content: center;
+    margin: auto;
     
 }
 
@@ -418,4 +433,41 @@
 
 .linkcolor {
     color: blue
+}
+
+.timeTravelButton {
+    display: flex;
+    justify-content: center;
+    border: solid gray .1em;
+    background-color: yellow;
+    /* border-radius: 50%; */
+    padding: 10px;
+    width: 180px;
+    box-shadow: 10px 5px 8px gray;
+}
+
+.timeTravelButton:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 79);
+}
+
+.timeTravelButtonContainer {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.twoButton {
+    display: flex;
+    justify-content: center;
+}
+
+.hoverPointer:hover {
+    cursor: pointer !important;
+}
+
+.centerIt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

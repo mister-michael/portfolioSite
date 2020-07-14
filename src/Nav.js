@@ -7,10 +7,6 @@ import {
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
     NavbarText
   } from 'reactstrap';
 
@@ -23,35 +19,23 @@ const TheNav = (props) => {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">
+                <NavbarBrand >
                     Michael Clark
                     {/* <a className="webDeveloper">web developer</a> */}
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
+                        
                         <NavItem>
-                            <NavLink href="/components/">Portfolio</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="https://github.com/mister-michael">GitHub</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="https://www.linkedin.com/in/michaelclarknashville/">LinkedIn</NavLink>
                         </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                Resume
-                </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    View
-                  </DropdownItem>
-                                <DropdownItem>
-                                    Download
-                  </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
+                        <NavItem>
+                            <NavLink href="https://chat.michaelclarknashville.com/sampleChatWithMichaelClarkNashville">Chat</NavLink>
+                        </NavItem>
                     </Nav>
                     <NavbarText>Web Developer</NavbarText>
                 </Collapse>

@@ -1,137 +1,150 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, CardText } from 'reactstrap';
-import Skills from "../present/Skills"
+import "./thePast.css"
 
 const ThePast = (props) => {
 
     const [modal, setModal] = useState(false);
+    const [image, setImage] = useState("./pastMedia/yarnHair.jpg")
 
-    const toggle = () => setModal(!modal);
+    const toggle = (e) => {
+        setImage(e.target.id)
+        setModal(!modal)
+        const isHidden = document.getElementById("modalImage").classList
+        if (isHidden.value === "hidden") {
+            document.getElementById("modalImage").classList.toggle("hidden")
+        }
+    }
 
-    const closeBtn = <button className="close" onClick={toggle}>&times;</button>;
-
-    const indentLarge = () => <a className="indentLarge"></a>
+    const goToFuture = () => {
+        props.setActiveTab("3")
+        window.scrollTo(0, 0)
+    }
 
     return (
         <>
             <div className="detailsCard pageBody">
-                <div className="">
-                    <a className="indent"></a>
-                    <div className="subText">
-                        <a className="biggerFont"><a className="indent"></a>We </a>are currently in the...</div>
-                    <div className="marginBottom60">
-                        <h1 className="headlineText borderBottom marginBottom3"><a className="indentLarge"></a>"Past"</h1>
+                <div className="subText">
+                    <div className="biggerFont">We </div>are currently in the...</div>
+                <div className="marginBottom20">
+                    <h1 className="headlineText  marginBottom3">"Past"</h1>
+
+                    <div className="bodyText marginBottom4 borderBottom">
+                        <p>
+                            " A E S T H E T I C S " defined my past.  After film school I decided to pursue a
+                            lost love of music. While learning production software, I ingratiated myself to the
+                            Chicago music scene as a photographer. Although every photo is a self-portrait, (ask
+                            any photographer), I sensed my audience was unaware of my presence in each photo. In an
+                            attempt to make that presence more overt, at one concert, I created a large paper collage
+                            backdrop and took pictures of guests in front of it. And so, I became a collage artist.
+                    </p>
+                        <p>
+                            Collage led to street art, and street art led to mixed media, and mixed media led back to video. So the story goes,
+                            it all came full circle. My curiosity and desire to learn kept me learning, and took me around the world,
+                            and on my journey I had done all that I dreamed, all but build a home.
+                    </p>
+                        <p>
+                            In code, I've found a home. A single medium where the horizon of discovery is unreachable. Unfortunately,
+                            or fortunately, the wealth of my creation remains quarantined in a storage locker in Los Angeles. These works are my earliest,
+                            and the only I have on-hand. It does seem appropriate that as I start my new journey, I show you how
+                            I started my last.
+                    </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="modalImage" className="marginTop">
+                    {image !== null ?
+                        <div className="centerImage">
+                            <img className="modalImage" src={require(`${image}`)} alt="" />
+                            {/* <button onClick={toggle2}>Close</button> */}
+                        </div>
+                        : null}
+                </div>
+
+                {/* <div style={{ color: "#808080" }}>click on a box to see the full image</div> */}
+
+                <div className="gallery">
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/Comic01.jpg" className="galleryImage" src={require("./pastMedia/Comic01.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/Danke.jpg" className="galleryImage" src={require("./pastMedia/Danke.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/girlFace.jpg" className="galleryImage" src={require("./pastMedia/girlFace.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/supergirl.jpg" className="galleryImage" src={require("./pastMedia/supergirl.jpg")} alt="" />
+                    </div>
+
+
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/BigScreen.jpg" className="galleryImage" src={require("./pastMedia/BigScreen.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/Cole.jpg" className="galleryImage" src={require("./pastMedia/Cole.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/punk.jpg" className="galleryImage" src={require("./pastMedia/punk.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/tim.jpg" className="galleryImage" src={require("./pastMedia/tim.jpg")} alt="" />
+                    </div>
+
+
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/tree.jpg" className="galleryImage" src={require("./pastMedia/tree.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/egoDeath.jpg" className="galleryImage" src={require("./pastMedia/egoDeath.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/leaves.jpg" className="galleryImage" src={require("./pastMedia/leaves.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/moth.jpg" className="galleryImage" src={require("./pastMedia/moth.jpg")} alt="" />
+                    </div>
+
+
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/pinwheelFace.jpg" className="galleryImage" src={require("./pastMedia/pinwheelFace.jpg")} alt="" />
+                    </div>
+
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/yarnEyes.jpg" className="galleryImage" src={require("./pastMedia/yarnEyes.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/yarnHair.jpg" className="galleryImage" src={require("./pastMedia/yarnHair.jpg")} alt="" />
+                    </div>
+
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/stephen.jpg" className="galleryImageTall" src={require("./pastMedia/stephenheight460px.jpg")} alt="" />
                     </div>
                 </div>
-                <CardText className="marginTop">
-                    <section className="flex-row-wrap">
-                        <img className="logo" src={require("../img/NSS-icon.jpeg")} />
-                        <div>
-                            <div className="subText bold">Nashville Software School</div>
-                            <div className="subTitle marginBottom20">Jan 2020 to Present</div>
-                        </div>
-                    </section>
-                    {/* <a className="indent"></a> */}
-                    <ul className="resumeDetails marginBottom">
-                        <li>Full-time Full-Stack Team-Intensive Bootcamp. </li>
-                        <li>Front End Development using HTML, CSS, Javascript and React.</li>
-                        <li>Back  End Development with Python and Django.</li>
-                        <li>Utilized third party APIs (JSON Server, The Movie Database) for web apps.</li>
-                        <li>Responsible for CRUD functionality in individual and group projects.</li>
-                        <li>Leveraged Slack and Zoom for remote study and group projects.</li>
-                        <li>Secure code version control using Git / Github.</li>
-                        <li>Project Management with Github Projects and Trelo.</li>
-                    </ul>
-                </CardText>
 
-
-                <section className="sectionHeader">
-                    <div className="headlineText2 marginTop borderBottom"><a className="indentLarge"></a>Apps</div>
-                    <div className="subText bold marginBottom borderBottom">{indentLarge()} Individual Projects</div>
-                </section>
-
-                <div id="hipstar-v2">
-                    <section onClick={toggle} id="" className="project-section marginTop ">
-                        <div className="skillsSection boxShadow ">
-                            <div className="project-card-header">
-                                <img className="hipstar" src={require("../img/django-icon.png")} />
-                                <img className="hipstar" src={require("../img/react-icon.png")} />
-                            </div>
-                            <div className="project-card card-font ">h!pst@r v.2</div>
-                            <div className="project-card-content">
-                                <b>h!pst@r</b> is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review.
-                        </div>
-                        </div>
-                    </section>
+                <div className="timeTravelButtonContainer marginTop2">
+                    <div
+                        onClick={goToFuture}
+                        className="timeTravelButton">Travel to the Future</div>
                 </div>
 
-                <div id="hipstar-vi">
-                    <section onClick={toggle} id="" className="project-section marginTop ">
-                        <div className="skillsSection boxShadow ">
-                            <div className="project-card-header">
-                                <img className="hipstar" src={require("../img/react-icon.png")} />
-                            </div>
-                            <div className="project-card card-font ">h!pst@r v.1</div>
-                            <div className="project-card-content">
-                                <b>h!pst@r</b> is a movie rating and recommendation site which connects users based on mutual distaste. Using The Movie Database (TMD) external API, users are able to search for movies, add them to their Love or Hate list, and leave a review.
-                                <p><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Link</a></p>
-
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-
-                <section className="sectionHeader">
-                    <div className="headlineText2 marginTop borderBottom"><a className="indentLarge"></a></div>
-                    <div className="subText bold marginBottom borderBottom">{indentLarge()} Group Projects</div>
-                </section>
-
-                <div id="hrapp">
-                    <section onClick={toggle} id="" className="project-section marginTop ">
-                        <div className="skillsSection boxShadow ">
-                            <div className="project-card-header">
-                                <img className="hipstar" src={require("../img/django-icon.png")} />
-                                <div className="project-card card-font ">Bangazon HR</div>
-                            </div>
-                            <div className="project-card-content">
-                                <p>
-                                    <b>Bangazon Workforce Management</b> is a back-end human resources management application built in Django, utilizing Templates to deliver DOM elements to the client.  SQLite and Tableplus are utilized for database XXXXXXwhat's the wordXXXXX and testing.
-                                </p>
-                                <p>
-                                    Styling is done in straight CSS.
-                                </p>
-                            </div>
-                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" className="linkcolor" id="hrapplink">Github Link</a>
-                        </div>
-                    </section>
-                </div>
-
-                <div id="hrapp">
-                    <section onClick={toggle} id="" className="project-section marginTop ">
-                        <div className="skillsSection boxShadow ">
-                            <div className="project-card-header">
-                                <img className="hipstar" src={require("../img/django-icon.png")} />
-                                <div className="project-card card-font ">Bangazon E-Commerce</div>
-                            </div>
-                            <div className="project-card-content">
-                                <p>
-                                    <b>Bangazon Workforce Management</b> is a back-end human resources management application built in Django, utilizing Templates to deliver DOM elements to the client.  SQLite and Tableplus are utilized for database XXXXXXwhat's the wordXXXXX and testing.
-                                </p>
-                                <p>
-                                    Styling is done in straight CSS.
-                                </p>
-                            </div>
-                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" id="hrapplink">Github Link</a>
-                        </div>
-                    </section>
-                </div>
-
-
-
-
-
-                <Skills />
             </div>
         </>
 

@@ -1,0 +1,48 @@
+.gallery {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+    
+}
+
+.imageCard {
+    width: 25%;
+    max-height: 96px;
+    overflow: hidden;
+}
+
+.imageCard:hover {
+    cursor: pointer;
+   
+}
+
+
+.galleryImage {
+    max-width: 100%;
+    /* overflow: hidden; */
+    /* max-height: 100px; */
+}
+.galleryImageTall {
+    max-width: 400px;
+    /* overflow: hidden; */
+    /* max-height: 100px; */
+}
+
+.modalImage {
+    width: 90%;
+    max-width: 720px;
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.centerImage {
+    display: flex;
+    justify-content: center;
+}
