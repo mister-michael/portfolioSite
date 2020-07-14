@@ -1,45 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./thePast.css"
 
 const ThePast = (props) => {
 
     const [modal, setModal] = useState(false);
-    const [image, setImage] = useState("./pastMedia/egoDeath.jpg")
+    const [image, setImage] = useState("./pastMedia/yarnHair.jpg")
 
     const toggle = (e) => {
         setImage(e.target.id)
         setModal(!modal)
         const isHidden = document.getElementById("modalImage").classList
-        console.log(isHidden)
         if (isHidden.value === "hidden") {
             document.getElementById("modalImage").classList.toggle("hidden")
         }
     }
 
-    const goToPast = () => {
-        props.setActiveTab("1")
-        window.scrollTo(0, 0)
-    }
     const goToFuture = () => {
         props.setActiveTab("3")
         window.scrollTo(0, 0)
     }
-
-    // useEffect(() => {
-
-    // }, [image])
 
     return (
         <>
             <div className="detailsCard pageBody">
                 <div className="subText">
                     <div className="biggerFont">We </div>are currently in the...</div>
-                <div className="marginBottom60">
-                    <h1 className="headlineText borderBottom marginBottom3">"Past"</h1>
+                <div className="marginBottom20">
+                    <h1 className="headlineText  marginBottom3">"Past"</h1>
+
+                    <div className="bodyText marginBottom4 borderBottom">
+                        <p>
+                            " A E S T H E T I C S " defined my past.  After film school I decided to pursue a
+                            lost love of music. While learning production software, I ingratiated myself to the
+                            Chicago music scene as a photographer. Although every photo is a self-portrait, (ask
+                            any photographer), I sensed my audience was unaware of my presence in each photo. In an
+                            attempt to make that presence more overt, at one concert, I created a large paper collage
+                            backdrop and took pictures of guests in front of it. And so, I became a collage artist.
+                    </p>
+                        <p>
+                            Collage led to street art, and street art led to mixed media, and mixed media led back to video. So the story goes,
+                            it all came full circle. My curiosity and desire to learn kept me learning, and took me around the world,
+                            and on my journey I had done all that I dreamed, all but build a home.
+                    </p>
+                        <p>
+                            In code, I've found a home. A single medium where the horizon of discovery is unreachable. Unfortunately,
+                            or fortunately, the wealth of my creation remains quarantined in a storage locker in Los Angeles. These works are my earliest,
+                            and the only I have on-hand. It does seem appropriate that as I start my new journey, I show you how
+                            I started my last.
+                    </p>
+                    </div>
+
+
                 </div>
 
 
-                <div id="modalImage">
+                <div id="modalImage" className="marginTop">
                     {image !== null ?
                         <div className="centerImage">
                             <img className="modalImage" src={require(`${image}`)} alt="" />
@@ -48,7 +63,7 @@ const ThePast = (props) => {
                         : null}
                 </div>
 
-                <div style={{ color: "#808080" }}>click on a box to see the full image</div>
+                {/* <div style={{ color: "#808080" }}>click on a box to see the full image</div> */}
 
                 <div className="gallery">
 
@@ -69,6 +84,7 @@ const ThePast = (props) => {
                     </div>
 
 
+
                     <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/BigScreen.jpg" className="galleryImage" src={require("./pastMedia/BigScreen.jpg")} alt="" />
                     </div>
@@ -84,6 +100,7 @@ const ThePast = (props) => {
                     <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/tim.jpg" className="galleryImage" src={require("./pastMedia/tim.jpg")} alt="" />
                     </div>
+
 
 
                     <div onClick={e => toggle(e)} className="imageCard">
@@ -104,31 +121,9 @@ const ThePast = (props) => {
 
 
 
-
-
-                    {/* <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/gogolStage.jpg" className="galleryImage" src={require("./pastMedia/gogolStage.jpg")} alt="" />
-                    </div> */}
-
-                    {/* <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/mirror.jpg" className="galleryImage" src={require("./pastMedia/mirror.jpg")} alt="" />
-                    </div> */}
-
-                    {/* <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/nemo.jpg" className="galleryImage" src={require("./pastMedia/nemo.jpg")} alt="" />
-                    </div> */}
-
                     <div onClick={e => toggle(e)} className="imageCard">
                         <img id="./pastMedia/pinwheelFace.jpg" className="galleryImage" src={require("./pastMedia/pinwheelFace.jpg")} alt="" />
                     </div>
-
-                    <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/stephen.jpg" className="galleryImage" src={require("./pastMedia/stephen.jpg")} alt="" />
-                    </div>
-
-
-
-
 
 
                     <div onClick={e => toggle(e)} className="imageCard">
@@ -139,17 +134,16 @@ const ThePast = (props) => {
                         <img id="./pastMedia/yarnHair.jpg" className="galleryImage" src={require("./pastMedia/yarnHair.jpg")} alt="" />
                     </div>
 
-                    {/* <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/Cloud.jpg" className="galleryImage" src={require("./pastMedia/Cloud.jpg")} alt="" />
-                    </div> */}
-
-                </div>
-               
-                    <div className="timeTravelButtonContainer marginTop">
-                        <div
-                            onClick={goToFuture}
-                            className="timeTravelButton">Travel to the Future</div>
+                    <div onClick={e => toggle(e)} className="imageCard">
+                        <img id="./pastMedia/stephen.jpg" className="galleryImageTall" src={require("./pastMedia/stephenheight460px.jpg")} alt="" />
                     </div>
+                </div>
+
+                <div className="timeTravelButtonContainer marginTop2">
+                    <div
+                        onClick={goToFuture}
+                        className="timeTravelButton">Travel to the Future</div>
+                </div>
 
             </div>
         </>

@@ -10,7 +10,7 @@ import './Portfolio.css'
 
 const PortfolioTabs = (props) => {
 
-    const [activeTab, setActiveTab] = useState('3');
+    const [activeTab, setActiveTab] = useState('2');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -22,15 +22,17 @@ const PortfolioTabs = (props) => {
                 <NavItem>
                 </NavItem>
 
-                <NavItem>
+                <NavItem className="hoverPointer" >
                     <NavLink
+                    
+                    
                         className={classnames({ active: activeTab === '2' })}
                         onClick={() => { toggle('2'); }}
                     >
                         Present
           </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="hoverPointer" >
                     <NavLink
                         className={classnames({ active: activeTab === '1' })}
                         onClick={() => { toggle('1'); }}
@@ -38,7 +40,7 @@ const PortfolioTabs = (props) => {
                         Past
                     </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="hoverPointer" >
                     <NavLink
                         className={classnames({ active: activeTab === '3' })}
                         onClick={() => { toggle('3'); }}

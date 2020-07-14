@@ -23,6 +23,11 @@ width: 100%;
     /* overflow: hidden; */
     /* max-height: 100px; */
 }
+.galleryImageTall {
+    max-width: 400px;
+    /* overflow: hidden; */
+    /* max-height: 100px; */
+}
 
 .modalImage {
     width: 90%;
