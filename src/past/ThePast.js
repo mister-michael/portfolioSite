@@ -15,11 +15,6 @@ const ThePast = (props) => {
         }
     }
 
-    const goToFuture = () => {
-        props.setActiveTab("3")
-        window.scrollTo(0, 0)
-    }
-
     return (
         <>
             <div className="detailsCard pageBody">

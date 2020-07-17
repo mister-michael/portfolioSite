@@ -10,7 +10,7 @@ import './Portfolio.css'
 
 const PortfolioTabs = (props) => {
 
-    const [activeTab, setActiveTab] = useState('4');
+    const [activeTab, setActiveTab] = useState('2');
 
     const goToPast = () => {
         window.scrollTo(0, 0)

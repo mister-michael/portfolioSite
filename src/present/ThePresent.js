@@ -10,11 +10,6 @@ const ThePresent = (props) => {
 
     const toggle = () => setModal(!modal);
 
-    const goToPast = () => {
-        props.setActiveTab("1")
-        window.scrollTo(0, 0)
-    }
-
     return (
         <div className="detailsCard pageBody">
             <section className="centerIt">
@@ -98,7 +93,7 @@ const ThePresent = (props) => {
                                         database.  Studio Managers (superusers), can edit employee details and de/activate staff.
 
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Overview on Github</a></div>
+                                        <div><a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Github Repo</a></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/django-icon.png")} alt="" />
@@ -123,7 +118,7 @@ const ThePresent = (props) => {
                                     Love or Hate list, and leave a review. This is a really fun app, I had a blast making it. My first
                                     solo project.
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Overview on Github</a></div>
+                                        <div><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Repo</a></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/react-icon.png")} alt="" />
@@ -145,7 +140,7 @@ const ThePresent = (props) => {
                                         <div><b>This website</b>  is built in React and deployed using Netlify. The Jitsi Video Conferencing
                                     utility is hosted by AWS. I could describe the rest of the site, but I'd much rather you see for yourself.
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/portfolioSite">Overview on Github</a></div>
+                                        <div><a className="linkcolor" href="https://github.com/mister-michael/portfolioSite">Github Repo</a></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/react-icon.png")} alt="" />
@@ -181,7 +176,7 @@ const ThePresent = (props) => {
                                     </p>
                                         <p>Styling is done in straight CSS.</p>
                                         <div>
-                                            <a href="https://github.com/nss-day-cohort-38/bangazon-ecommerce-web-app-neo-colony" id="hrapplink">Github Link</a>
+                                            <a href="https://github.com/nss-day-cohort-38/bangazon-ecommerce-web-app-neo-colony" id="hrapplink">Github Repo</a>
                                         </div>
                                     </div>
                                     <div className="card-image-padding">
@@ -212,7 +207,7 @@ const ThePresent = (props) => {
                                         SQLite and Tableplus are utilized for database management, straight CSS for styling and Postman utilized for testing.
                                     </p>
                                         <div>
-                                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" className="linkcolor" id="hrapplink">View on Github</a>
+                                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" className="linkcolor" id="hrapplink">Github Repo</a>
                                         </div>
                                     </div>
                                     <div className="card-image-padding">
