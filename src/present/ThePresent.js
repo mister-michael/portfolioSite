@@ -10,11 +10,6 @@ const ThePresent = (props) => {
 
     const toggle = () => setModal(!modal);
 
-    const goToPast = () => {
-        props.setActiveTab("1")
-        window.scrollTo(0, 0)
-    }
-
     return (
         <div className="detailsCard pageBody">
             <section className="centerIt">
@@ -34,15 +29,12 @@ const ThePresent = (props) => {
                         and levels of logic of which past mediums were woefully devoid. Code has provided
                         me with a task, a community and a frame of mind which continue to enrich and
                         inspire me.
+                    </div>
                 </div>
-                </div>
-
-
-
 
                 <div>
                     <div className="detailsCard pageBody">
-                       
+
                         <div className="marginTop">
                             <section className="flex-row-wrap">
                                 <img className="logo" src={require("../img/NSS-icon.jpeg")} alt="" />
@@ -51,7 +43,6 @@ const ThePresent = (props) => {
                                     <div className="subTitle marginBottom20">Jan 2020 to Jun 2020</div>
                                 </div>
                             </section>
-                            {/* <a className="indent"></a> */}
                             <ul className="resumeDetails marginBottom">
                                 <li>Full-time Full-Stack Team-Intensive Bootcamp. </li>
                                 <li>Front End Development using HTML, CSS, Javascript and React.</li>
@@ -67,10 +58,7 @@ const ThePresent = (props) => {
                         <div className="">
                             <div className="subText">
                                 <div className="biggerFont">Unexpected </div>lessons...
-                    </div>
-                            {/* <div className="">
-                            <h1 className="headlineText"><a className="indentLarge"></a>Present</h1>
-                        </div> */}
+                            </div>
                         </div>
                         <div className="marginTop2 marginBottom3">
                             <div className="bodyText ">
@@ -105,7 +93,7 @@ const ThePresent = (props) => {
                                         database.  Studio Managers (superusers), can edit employee details and de/activate staff.
 
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Overview on Github</a></div>
+                                        <div><a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Github Repo</a></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/django-icon.png")} alt="" />
@@ -130,7 +118,7 @@ const ThePresent = (props) => {
                                     Love or Hate list, and leave a review. This is a really fun app, I had a blast making it. My first
                                     solo project.
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Overview on Github</a></div>
+                                        <div><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Repo</a></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/react-icon.png")} alt="" />
@@ -152,7 +140,7 @@ const ThePresent = (props) => {
                                         <div><b>This website</b>  is built in React and deployed using Netlify. The Jitsi Video Conferencing
                                     utility is hosted by AWS. I could describe the rest of the site, but I'd much rather you see for yourself.
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/portfolioSite">Overview on Github</a></div>
+                                        <div><a className="linkcolor" href="https://github.com/mister-michael/portfolioSite">Github Repo</a></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/react-icon.png")} alt="" />
@@ -167,7 +155,6 @@ const ThePresent = (props) => {
                                 </div>
                             </section>
                         </div>
-
 
                         <section className="sectionHeader">
                             <div className="subText bold marginBottom borderBottom">{indentLarge()} Group Projects</div>
@@ -186,11 +173,10 @@ const ThePresent = (props) => {
                                         really came together. Having gained that understanding, I put in a concerted effort into helping my teammates,
                                         and through teaching and assisting I cemented that understanding.
 
-
                                     </p>
                                         <p>Styling is done in straight CSS.</p>
                                         <div>
-                                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" id="hrapplink">Github Link</a>
+                                            <a href="https://github.com/nss-day-cohort-38/bangazon-ecommerce-web-app-neo-colony" id="hrapplink">Github Repo</a>
                                         </div>
                                     </div>
                                     <div className="card-image-padding">
@@ -220,9 +206,8 @@ const ThePresent = (props) => {
                                         built in Django, utilizing Templates to deliver DOM elements to the client.
                                         SQLite and Tableplus are utilized for database management, straight CSS for styling and Postman utilized for testing.
                                     </p>
-                                        {/* <p>Styling is done in straight CSS. </p> */}
                                         <div>
-                                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" className="linkcolor" id="hrapplink">Github Link</a>
+                                            <a href="https://github.com/nss-day-cohort-38/bangazon-workforce-management-alpha-orionis" className="linkcolor" id="hrapplink">Github Repo</a>
                                         </div>
                                     </div>
                                     <div className="card-image-padding">
@@ -239,7 +224,7 @@ const ThePresent = (props) => {
                         <Skills className="marginBottom20" />
                         <div className="timeTravelButtonContainer">
                             <div
-                                onClick={goToPast}
+                                onClick={()=>{props.goToPast()}}
                                 className="timeTravelButton marginTop">Travel to the Past</div>
                         </div>
                     </div>

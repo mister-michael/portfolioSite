@@ -9,28 +9,23 @@ const ThePast = (props) => {
     const toggle = (e) => {
         setImage(e.target.id)
         setModal(!modal)
-        const isHidden = document.getElementById("modalImage").classList
-        if (isHidden.value === "hidden") {
+        const isHidden = document.getElementById("modalImage")
+        if (isHidden !== null) {
             document.getElementById("modalImage").classList.toggle("hidden")
         }
-    }
-
-    const goToFuture = () => {
-        props.setActiveTab("3")
-        window.scrollTo(0, 0)
     }
 
     return (
         <>
             <div className="detailsCard pageBody">
                 <div className="subText">
-                    <div className="biggerFont">We </div>are currently in the...</div>
+                    <div className="biggerFont">We </div>are now in the...</div>
                 <div className="marginBottom20">
                     <h1 className="headlineText  marginBottom3">"Past"</h1>
 
                     <div className="bodyText marginBottom4 borderBottom">
                         <p>
-                            " A E S T H E T I C S " defined my past.  After film school I decided to pursue a
+                            " A E S T H E T I C S " defined my past.  After film school, I decided to pursue a
                             lost love of music. While learning production software, I ingratiated myself to the
                             Chicago music scene as a photographer. Although every photo is a self-portrait, (ask
                             any photographer), I sensed my audience was unaware of my presence in each photo. In an
@@ -54,16 +49,10 @@ const ThePast = (props) => {
                 </div>
 
 
-                <div id="modalImage" className="marginTop">
-                    {image !== null ?
-                        <div className="centerImage">
-                            <img className="modalImage" src={require(`${image}`)} alt="" />
-                            {/* <button onClick={toggle2}>Close</button> */}
-                        </div>
-                        : null}
-                </div>
+                {image !== null ?
+                    <img className="modalImage" src={require(`${image}`)} alt="" />
+                    : null}
 
-                {/* <div style={{ color: "#808080" }}>click on a box to see the full image</div> */}
 
                 <div className="gallery">
 
@@ -135,13 +124,13 @@ const ThePast = (props) => {
                     </div>
 
                     <div onClick={e => toggle(e)} className="imageCard">
-                        <img id="./pastMedia/stephen.jpg" className="galleryImageTall" src={require("./pastMedia/stephenheight460px.jpg")} alt="" />
+                        <img id="./pastMedia/stephen.jpg" className="galleryImage" src={require("./pastMedia/stephenDisplay.jpg")} alt="" />
                     </div>
                 </div>
 
                 <div className="timeTravelButtonContainer marginTop2">
                     <div
-                        onClick={goToFuture}
+                        onClick={()=>{props.goToFuture()}}
                         className="timeTravelButton">Travel to the Future</div>
                 </div>
 
