@@ -19,12 +19,12 @@ const TheFuture = (props) => {
                     <div className="marginTop marginBottom2 borderBottom">
                         <div className="bodyText marginBottom ">
                             <p>
-                                My mother was fond of telling me, "Yesterday is history, Tomorrow's a mystery, Today is a gift, that's why we call it the present,"
+                                "Yesterday is history, Tomorrow's a mystery, Today is a gift, that's why we call it the present,"
                                 the wisdom of which reached me later in life than I may have liked. But isn't that the nature
                                 of wisdom?  As I look forward toward my career, I find myself open to a myriad of possibilities.
                                 My past experience with visual arts leads my eye to front-end work, perhaps in consulting, as I'm very
                                 interested in UI/UX. The project doesn't seem to become real until it meets its user.  However,
-                                i find myself increasingly appreciative of the server-side. The nature of the DOM is pretty hollow without
+                                I find myself increasingly appreciative of the server-side. The nature of the DOM is pretty hollow without
                                 meaningful data to represent. I want to learn every part of this machine, and whatever I learn next
                                 will only be the start of an incredible journey. If I could hope for one thing, it is to be part
                                 of a great team of which I can be a great member.

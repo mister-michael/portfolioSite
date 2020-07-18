@@ -103,6 +103,8 @@ const ThePresent = (props) => {
                                         <img className="project-card-image" src={require("../img/github-icon.png")} alt="" />
                                         <img className="project-card-image" src={require("../img/python-icon.png")} alt="" />
                                         <img className="project-card-image" src={require("../img/javascript-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/postman-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/tableplus-icon.jpeg")} alt="" />
                                     </div>
                                 </div>
                             </section>
@@ -127,6 +129,7 @@ const ThePresent = (props) => {
                                         <img className="project-card-image" src={require("../img/github-icon.png")} alt="" />
                                         <img className="project-card-image" src={require("../img/python-icon.png")} alt="" />
                                         <img className="project-card-image" src={require("../img/javascript-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/postman-icon.png")} alt="" />
                                     </div>
                                 </div>
                             </section>

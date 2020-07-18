@@ -1,6 +1,6 @@
 import React from "react";
 
-const Resume = (props) => {
+const CoverLetter = (props) => {
 
     return (
         <>
@@ -8,10 +8,8 @@ const Resume = (props) => {
             <section className="pageBody siteBody">
 
                 <div className="resume">
-                    <div className="resumeContainer marginTop borderBottom">
-                        <img id="../future/resume-blue-1.jpg" className="resumeImage" src={require("../future/Michael_Clark_Developer-Resume-1.jpg")} alt="" />
-                        <img id="../future/resume-blue-2.jpg" className="resumeImage" src={require("../future/Michael_Clark_Developer-Resume-2.jpg")} alt="" />
-                    </div>
+                    {/* <h2 className="marginTop">Cover Letter</h2> */}
+                    <img id="../future/resume-blue-2.jpg" className="resumeImage marginTop marginBottom20" src={require("../future/Michael_Clark_Developer-CV.jpg")} alt="" />
                 </div>
                     
                         <div
@@ -26,4 +24,4 @@ const Resume = (props) => {
     )
 }
 
-export default Resume
+export default CoverLetter
