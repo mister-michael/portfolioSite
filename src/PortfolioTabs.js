@@ -69,14 +69,14 @@ const PortfolioTabs = (props) => {
                         Resume
                     </NavLink>
                 </NavItem>
-                <NavItem className="hoverPointer" >
+                {/* <NavItem className="hoverPointer" >
                     <NavLink
                         className={classnames({ active: activeTab === '5' })}
                         onClick={() => { toggle('5'); }}
                     >
                         CV
                     </NavLink>
-                </NavItem>
+                </NavItem> */}
             </Nav>
 
             <TabContent className="page-container" activeTab={activeTab}>

@@ -3,7 +3,6 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 width: 100%;
-    
 }
 
 .imageCard {
@@ -15,7 +14,6 @@ width: 100%;
 .imageCard:hover {
     cursor: pointer;
 }
-
 
 .galleryImage {
     max-width: 100%;

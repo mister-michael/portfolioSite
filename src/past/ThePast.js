@@ -21,7 +21,7 @@ const ThePast = (props) => {
                 <div className="subText">
                     <div className="biggerFont">We </div>are now in the...</div>
                 <div className="marginBottom20">
-                    <h1 className="headlineText  marginBottom3">"Past"</h1>
+                    <h1 className="headlineText  marginBottom3">Past</h1>
 
                     <div className="bodyText marginBottom4 borderBottom">
                         <p>

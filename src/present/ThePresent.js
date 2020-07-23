@@ -1,4 +1,8 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 import Skills from "./Skills"
 import "../Portfolio.css"
 
@@ -11,7 +15,7 @@ const ThePresent = (props) => {
     const toggle = () => setModal(!modal);
 
     return (
-        <div className="detailsCard pageBody">
+        <div id="PresentPage" className="detailsCard pageBody mobileCard">
             <section className="centerIt">
                 <div className="">
                     <div className="subText">
@@ -24,18 +28,18 @@ const ThePresent = (props) => {
                 <div className="marginTop ">
                     <div className="bodyText marginBottom2 borderBottom">
                         I have spent my life in the pursuit of creation. Musical, photographic and
-                        experiential. In code, I've found the ultimate creative tool, and in apps,
-                        the ultimate canvas.  Levels of abstraction and metaphor akin to art and story,
+                        experiential. In code, I have found the ultimate creative tool, and in apps,
+                        the ultimate canvas.  I have found levels of abstraction and metaphor akin to art and story,
                         and levels of logic of which past mediums were woefully devoid. Code has provided
                         me with a task, a community and a frame of mind which continue to enrich and
                         inspire me.
                     </div>
                 </div>
 
-                <div>
-                    <div className="detailsCard pageBody">
+                <div >
+                    <div id="PresentBody" className="mobileCard detailsCard pageBody">
 
-                        <div className="marginTop">
+                        <div className="marginTop ">
                             <section className="flex-row-wrap">
                                 <img className="logo" src={require("../img/NSS-icon.jpeg")} alt="" />
                                 <div>
@@ -60,8 +64,8 @@ const ThePresent = (props) => {
                                 <div className="biggerFont">Unexpected </div>lessons...
                             </div>
                         </div>
-                        <div className="marginTop2 marginBottom3">
-                            <div className="bodyText ">
+                        <div id="lessons"className="marginTop2 marginBottom3">
+                            <div className="bodyText mobileCard">
                                 <ul>
                                     <li>Team Communication</li>
                                     <li>The Joy of DeBugging</li>
@@ -79,15 +83,15 @@ const ThePresent = (props) => {
                             <div className="subText bold marginBottom borderBottom">{indentLarge()} Individual Projects</div>
                         </section>
 
-                        <div id="projectM">
-                            <section onClick={toggle} id="" className="project-section marginTop ">
+                        <div id="PresentBody">
+                            <section onClick={toggle} id="" className="project-section marginTop">
 
-                                <div className="skillsSection boxShadow ">
+                                <div className="skillsSection boxShadow">
 
                                     <div className="project-card card-font">projectM</div>
-                                    <div className="cardPadding">
+                                    <div className="cardPadding ">
 
-                                        <div><b>projectM</b> is a Project Management application for Photo Studios. Using Django ORM and Rest Framework, with a React Front-end,
+                                        <div className=""><b>projectM</b> is a Project Management application for Photo Studios. Using Django ORM and Rest Framework, with a React Front-end,
                                         projectM allows studio managers and employees to coordinate photoshoots and equipment. With full CRUD functionality
                                         users can see and schedule upcoming photoshoots, add clients and equipment to photoshoots, and add equipment and clients to the
                                         database.  Studio Managers (superusers), can edit employee details and de/activate staff.
@@ -140,7 +144,7 @@ const ThePresent = (props) => {
                                 <div className="skillsSection boxShadow ">
                                     <div className="project-card card-font ">This Website</div>
                                     <div className="cardPadding">
-                                        <div><b>This website</b>  is built in React and deployed using Netlify. The Jitsi Video Conferencing
+                                        <div><b>This website</b>  is built in React, styled in straight CSS, and deployed using Netlify. The Jitsi Video Conferencing
                                     utility is hosted by AWS. I could describe the rest of the site, but I'd much rather you see for yourself.
                                     </div>
                                         <div><a className="linkcolor" href="https://github.com/mister-michael/portfolioSite">Github Repo</a></div>
@@ -227,7 +231,7 @@ const ThePresent = (props) => {
                         <Skills className="marginBottom20" />
                         <div className="timeTravelButtonContainer">
                             <div
-                                onClick={()=>{props.goToPast()}}
+                                onClick={() => { props.goToPast() }}
                                 className="timeTravelButton marginTop">Travel to the Past</div>
                         </div>
                     </div>
