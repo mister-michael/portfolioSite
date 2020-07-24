@@ -3,19 +3,56 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import Skills from "./Skills"
-import "../Portfolio.css"
+import Skills from "./Skills";
+import "../Portfolio.css";
 
 const ThePresent = (props) => {
 
-    const indentLarge = () => ""
+    const indentLarge = () => "";
 
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
 
+    function getOffset(el) {
+        const rect = el.getBoundingClientRect();
+        return {
+            left: rect.left + window.scrollX,
+            top: rect.top + window.scrollY
+        };
+    };
+
+    const scrollToEducation = () => {
+        const educationElement = document.getElementById("education");
+        window.scrollTo(0, getOffset(educationElement).top);
+    };
+
+    const scrollToProjects = () => {
+        const projectsElement = document.getElementById("projects1");
+        window.scrollTo(0, getOffset(projectsElement).top);
+    };
+
+
+
     return (
         <div id="PresentPage" className="detailsCard pageBody mobileCard">
+
+            <div className="marginBottom borderBottom" id="initial-instructions">
+                You can go directly to my
+                <div className="in-site-link" onClick={() => { props.goToResume() }}> resume, </div> or scroll down to
+                learn about my <div className="in-site-link" onClick={scrollToEducation}>coding education</div>,  my
+                <div onClick={scrollToProjects} className="in-site-link"> coding-projects, </div>
+                my history in the <div className="in-site-link" onClick={() => { props.goToPast() }}>arts</div> (the Past)
+                and my <div className="in-site-link" onClick={() => { props.goToFuture() }}> aspirations</div> (the Future).
+                At the bottom of each page, you'll find a time-travel button to take you to the next
+                page in the timeline.
+                Here, and in the menu at the top of the page, are links to my
+                <a className="in-site-link" href="https://www.linkedin.com/in/michaelclarknashville/"> LinkedIn</a> and
+                <a className="in-site-link" href="https://github.com/mister-michael"> Github</a> pages, as well as my
+                <a className="in-site-link" href="chat.michaelclarknashville.com"> Jitsi Video Conferencing </a>server and contact information.
+            <div className="marginTop marginBottom">Start scrolling for the full experience</div>
+            </div>
+
             <section className="centerIt">
                 <div className="">
                     <div className="subText">
@@ -26,20 +63,22 @@ const ThePresent = (props) => {
                     </div>
                 </div>
                 <div className="marginTop ">
-                    <div className="bodyText marginBottom2 borderBottom">
+                    <div className="bodyText marginBottom2  ">
                         I have spent my life in the pursuit of creation. Musical, photographic and
                         experiential. In code, I have found the ultimate creative tool, and in apps,
                         the ultimate canvas.  I have found levels of abstraction and metaphor akin to art and story,
                         and levels of logic of which past mediums were woefully devoid. Code has provided
                         me with a task, a community and a frame of mind which continue to enrich and
-                        inspire me.
+                        inspire me. This discovery was made at Nashville Software School, a 6-month, full-time,
+                        full-stack coding bootcamp where I participated in Group and Individual projects
+                        using React.js and Django, including three months of Remote Working Experience.
                     </div>
                 </div>
 
                 <div >
                     <div id="PresentBody" className="mobileCard detailsCard pageBody">
 
-                        <div className="marginTop ">
+                        <div id="education" className="marginTop ">
                             <section className="flex-row-wrap">
                                 <img className="logo" src={require("../img/NSS-icon.jpeg")} alt="" />
                                 <div>
@@ -64,7 +103,7 @@ const ThePresent = (props) => {
                                 <div className="biggerFont">Unexpected </div>lessons...
                             </div>
                         </div>
-                        <div id="lessons"className="marginTop2 marginBottom3">
+                        <div id="lessons" className="marginTop2 marginBottom3">
                             <div className="bodyText mobileCard">
                                 <ul>
                                     <li>Team Communication</li>
@@ -79,9 +118,33 @@ const ThePresent = (props) => {
 
 
                         <section className="sectionHeader">
-                            <div className="headlineText2 marginTop borderBottom">Apps</div>
+                            <div id="projects1" className="headlineText2 marginTop borderBottom">Apps</div>
                             <div className="subText bold marginBottom borderBottom">{indentLarge()} Individual Projects</div>
                         </section>
+
+                        <div className="marginBottom40" id="hipstar-vi">
+                            <section onClick={toggle} id="" className="project-section marginTop ">
+                                <div className="skillsSection boxShadow ">
+                                    <div className="project-card card-font ">h!pst@r</div>
+                                    <div className="cardPadding">
+                                        <div><b>h!pst@r</b> is a movie rating and recommendation site which connects users based on mutual distaste.
+                                    Using The Movie Database (TMD) external API, users are able to search for movies, add them to their
+                                    Love or Hate list, and leave a review. This is a really fun app, I had a blast making it. My first
+                                    solo project.  Overview, screenshots and download instructions are available in the <a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Repo</a>.
+                                        </div>
+                                    </div>
+                                    <div className="card-image-padding">
+                                        <img className="project-card-image" src={require("../img/react-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/HTML5-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/css3-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/github-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/python-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/javascript-icon.png")} alt="" />
+                                        <img className="project-card-image" src={require("../img/postman-icon.png")} alt="" />
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
 
                         <div id="PresentBody">
                             <section onClick={toggle} id="" className="project-section marginTop">
@@ -94,10 +157,11 @@ const ThePresent = (props) => {
                                         <div className=""><b>projectM</b> is a Project Management application for Photo Studios. Using Django ORM and Rest Framework, with a React Front-end,
                                         projectM allows studio managers and employees to coordinate photoshoots and equipment. With full CRUD functionality
                                         users can see and schedule upcoming photoshoots, add clients and equipment to photoshoots, and add equipment and clients to the
-                                        database.  Studio Managers (superusers), can edit employee details and de/activate staff.
+                                        database.  Studio Managers (superusers), can edit employee details and de/activate staff.  Overview, screenshots and download instructions are 
+                                        available in the <a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Github Repo</a>.
 
                                     </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Github Repo</a></div>
+                                        <div></div>
                                     </div>
                                     <div className="card-image-padding">
                                         <img className="project-card-image" src={require("../img/django-icon.png")} alt="" />
@@ -114,37 +178,14 @@ const ThePresent = (props) => {
                             </section>
                         </div>
 
-                        <div className="marginBottom40" id="hipstar-vi">
-                            <section onClick={toggle} id="" className="project-section marginTop ">
-                                <div className="skillsSection boxShadow ">
-                                    <div className="project-card card-font ">h!pst@r</div>
-                                    <div className="cardPadding">
-                                        <div><b>h!pst@r</b> is a movie rating and recommendation site which connects users based on mutual distaste.
-                                    Using The Movie Database (TMD) external API, users are able to search for movies, add them to their
-                                    Love or Hate list, and leave a review. This is a really fun app, I had a blast making it. My first
-                                    solo project.
-                                    </div>
-                                        <div><a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Repo</a></div>
-                                    </div>
-                                    <div className="card-image-padding">
-                                        <img className="project-card-image" src={require("../img/react-icon.png")} alt="" />
-                                        <img className="project-card-image" src={require("../img/HTML5-icon.png")} alt="" />
-                                        <img className="project-card-image" src={require("../img/css3-icon.png")} alt="" />
-                                        <img className="project-card-image" src={require("../img/github-icon.png")} alt="" />
-                                        <img className="project-card-image" src={require("../img/python-icon.png")} alt="" />
-                                        <img className="project-card-image" src={require("../img/javascript-icon.png")} alt="" />
-                                        <img className="project-card-image" src={require("../img/postman-icon.png")} alt="" />
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
+
 
                         <div className="marginBottom60" id="hipstar-vi">
                             <section onClick={toggle} id="" className="project-section marginTop ">
                                 <div className="skillsSection boxShadow ">
                                     <div className="project-card card-font ">This Website</div>
                                     <div className="cardPadding">
-                                        <div><b>This website</b>  is built in React, styled in straight CSS, and deployed using Netlify. The Jitsi Video Conferencing
+                                        <div><b>This website</b>  is built in React and deployed using Netlify. The Jitsi Video Conferencing
                                     utility is hosted by AWS. I could describe the rest of the site, but I'd much rather you see for yourself.
                                     </div>
                                         <div><a className="linkcolor" href="https://github.com/mister-michael/portfolioSite">Github Repo</a></div>

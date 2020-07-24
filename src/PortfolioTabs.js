@@ -27,6 +27,10 @@ const PortfolioTabs = (props) => {
         window.scrollTo(0, 0)
         setActiveTab("2")
     }
+    const goToResume = () => {
+        window.scrollTo(0, 0)
+        setActiveTab("4")
+    }
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -103,6 +107,8 @@ const PortfolioTabs = (props) => {
                     <ThePresent
                         setActiveTab={setActiveTab}
                         goToPast={goToPast}
+                        goToFuture={goToFuture}
+                        goToResume={goToResume}
                         {...props}
                         toggle={toggle} />
                 </TabPane>

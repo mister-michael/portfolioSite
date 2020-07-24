@@ -422,6 +422,19 @@
     max-width: 1000px;
 }
 
+.in-site-link {
+    color: rgb(0, 123, 255);
+    display: inline;
+}
+
+.in-site-link:hover {
+    cursor: pointer;
+}
+
+#initial-instructions {
+    font-style: italic;
+}
+
 @media screen and (max-width: 760px) {
     #PresentPage {
         margin: 0px;
