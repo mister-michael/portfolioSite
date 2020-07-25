@@ -38,7 +38,7 @@ const TheNav = (props) => {
                             <NavLink href="https://www.linkedin.com/in/michaelclarknashville/">LinkedIn</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://chat.michaelclarknashville.com/sampleChatWithMichaelClarkNashville">Chat</NavLink>
+                            <NavLink href="https://chat.michaelclarknashville.com/">Chat</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
