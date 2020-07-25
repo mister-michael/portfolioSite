@@ -6,6 +6,7 @@ import ThePresent from "./present/ThePresent"
 import ThePast from "./past/ThePast"
 import TheFuture from "./future/TheFuture"
 import Resume from "./resume/Resume"
+import CoverLetter from "./resume/CoverLetter"
 import './Portfolio.css'
 
 const PortfolioTabs = (props) => {
@@ -25,6 +26,10 @@ const PortfolioTabs = (props) => {
     const goToPresent = () => {
         window.scrollTo(0, 0)
         setActiveTab("2")
+    }
+    const goToResume = () => {
+        window.scrollTo(0, 0)
+        setActiveTab("4")
     }
 
     const toggle = tab => {
@@ -68,6 +73,14 @@ const PortfolioTabs = (props) => {
                         Resume
                     </NavLink>
                 </NavItem>
+                {/* <NavItem className="hoverPointer" >
+                    <NavLink
+                        className={classnames({ active: activeTab === '5' })}
+                        onClick={() => { toggle('5'); }}
+                    >
+                        CV
+                    </NavLink>
+                </NavItem> */}
             </Nav>
 
             <TabContent className="page-container" activeTab={activeTab}>
@@ -94,6 +107,8 @@ const PortfolioTabs = (props) => {
                     <ThePresent
                         setActiveTab={setActiveTab}
                         goToPast={goToPast}
+                        goToFuture={goToFuture}
+                        goToResume={goToResume}
                         {...props}
                         toggle={toggle} />
                 </TabPane>
@@ -109,6 +124,18 @@ const PortfolioTabs = (props) => {
                 <TabPane tabId="4">
                     {/* <TheHeader headerURL={"./threeMikes-big.jpg"} /> */}
                     <Resume
+                        className="siteBody"
+                        toggle={toggle}
+                        setActiveTab={setActiveTab}
+                        goToFuture={goToFuture}
+                        goToPast={goToPast}
+                        goToPresent={goToPresent}
+                        {...props}
+                    />
+                </TabPane>
+                <TabPane tabId="5">
+                    {/* <TheHeader headerURL={"./threeMikes-big.jpg"} /> */}
+                    <CoverLetter
                         className="siteBody"
                         toggle={toggle}
                         setActiveTab={setActiveTab}

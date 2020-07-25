@@ -9,9 +9,9 @@ const AppViews = (props) => {
     return (
         <>
 
-            <div className="siteContainer stieBody">
+            <div className="siteContainer stieBody mobileCard">
                 <TheNav className="navStyle" />
-                <PortfolioTabs />
+                <PortfolioTabs className="mobileCard"/>
                 <TheFooter />
             </div>
         </>
