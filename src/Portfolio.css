@@ -435,11 +435,15 @@
     font-style: italic;
 }
 
-@media screen and (max-width: 760px) {
+.appImage {
+    max-width: 700px;
+}
+
+@media screen and (max-width: 800px) {
     #PresentPage {
         margin: 0px;
         width:100%;
-        margin-bottom: "20px"
+        margin-bottom: "20px";
     }
     /* #PresentBody {
         margin: 0px;
@@ -483,5 +487,9 @@
         margin-left: 5px;
         margin-bottom: 0px;
         font-size: medium;
+    }
+
+    .appImage {
+        width: 100%;
     }
 }
