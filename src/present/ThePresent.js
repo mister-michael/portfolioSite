@@ -58,8 +58,8 @@ const ThePresent = (props) => {
                         <h1 className="headlineText">Present</h1>
                     </div>
                 </div>
-                <div className="marginTop ">
-                    <div className="bodyText marginBottom2  ">
+                <div className="marginTop">
+                    <div className="bodyText marginBottom">
                         I have spent my life in the pursuit of creation. Musical, photographic and
                         experiential. In code, I have found the ultimate creative tool, and in apps,
                         the ultimate canvas.  I have found levels of abstraction and metaphor akin to art and story,
@@ -74,7 +74,7 @@ const ThePresent = (props) => {
                 <div >
                     <div id="PresentBody" className="mobileCard detailsCard pageBody">
 
-                        <div id="education" className="marginTop ">
+                        <div id="education" className=" ">
                             <section className="flex-row-wrap">
                                 <img className="logo" src={require("../img/NSS-icon.jpeg")} alt="" />
                                 <div>
@@ -122,7 +122,7 @@ const ThePresent = (props) => {
                             <section onClick={toggle} id="" className="project-section marginTop ">
                                 <div className="skillsSection boxShadow ">
                                     <div className="project-card card-font ">h!pst@r</div>
-                                    <img className="appImage" src={require("../img/project_images/hipstar_image.png")} />
+                                    <img className="appImage" src={require("../img/project_images/hipstar-image.png")} alt="hipstar screenshot" />
                                     <div className="cardPadding">
                                         <div><b>h!pst@r</b> is a movie rating and recommendation site, built in React.js, which connects users based on mutual distaste.
                                     Using The Movie Database (TMD) external API, users are able to search for movies, add them to their
@@ -149,13 +149,16 @@ const ThePresent = (props) => {
                                 <div className="skillsSection boxShadow">
 
                                     <div className="project-card card-font">projectM</div>
-                                    <img className="appImage" src={require("../img/project_images/equipment-image.png")} />
+                                    <div className="appImage">
+
+                                        <img className="appImage" src={require("../img/project_images/equipment-image-700.png")} alt="projectM screenshot" />
+                                    </div>
                                     <div className="cardPadding ">
 
                                         <div className=""><b>projectM</b> is a Project Management application for Photo Studios. Using Django ORM and Rest Framework, with a React Front-end,
                                         projectM allows studio managers and employees to coordinate photoshoots and equipment. With full CRUD functionality
                                         users can see and schedule upcoming photoshoots, add clients and equipment to photoshoots, and add equipment and clients to the
-                                        database.  Studio Managers (superusers), can edit employee details and de/activate staff.  Overview, screenshots and download instructions are 
+                                        database.  Studio Managers (superusers), can edit employee details and de/activate staff.  Overview, screenshots and download instructions are
                                         available in the <a className="linkcolor" href="https://github.com/mister-michael/backend-capstone-web-app-react">Github Repo</a>.
 
                                     </div>
