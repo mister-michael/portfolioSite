@@ -121,13 +121,13 @@ const ThePresent = (props) => {
                         <div className="marginBottom40" id="hipstar-vi">
                             <section onClick={toggle} id="" className="project-section marginTop ">
                                 <div className="skillsSection boxShadow ">
-                                    <div className="project-card card-font ">h!pst@r</div>
+                                    <div className="project-card card-font ">h!pst@r <a href="https://www.hipstar.app">www.hipstar.app</a></div>
                                     <img className="appImage" src={require("../img/project_images/hipstar-image.png")} alt="hipstar screenshot" />
                                     <div className="cardPadding">
                                         <div><b>h!pst@r</b> is a movie rating and recommendation site, built in React.js, which connects users based on mutual distaste.
                                     Using The Movie Database (TMD) external API, users are able to search for movies, add them to their
                                     Love or Hate lists and leave a review. This is a really fun app and I had a blast making it. My first
-                                    solo project.  Overview, screenshots and download instructions are available in the <a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Repo</a>.
+                                    solo project.  The site has been deployed at <a href="https://www.hipstar.app">hipstar.app.</a> Code overview, screenshots and download instructions are available in the <a className="linkcolor" href="https://github.com/mister-michael/hipStar">Github Repo</a>.
                                         </div>
                                     </div>
                                     <div className="card-image-padding">
