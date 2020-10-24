@@ -4,9 +4,14 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AppViews from "./AppViews"
+import Portfolio from './Portfolio';
+import {BrowserRouter as Router} from "react-router-dom";
+
 
 ReactDOM.render(
-  <AppViews/>,
+  <Router>
+    <Portfolio />
+  </Router>,
   document.getElementById('root')
 );
 

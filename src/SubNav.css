@@ -1,0 +1,15 @@
+.SubNav-Container {
+  background-color: gray;
+
+}
+
+.SubNav-Items {
+  display: flex;
+  margin-left: 10px;
+  padding: 10px 0px;
+}
+
+.SubNav-NavLink {
+  color: white;
+  padding: 0px 10px
+}
